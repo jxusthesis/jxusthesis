@@ -1,0 +1,75 @@
+% Chapter 2
+
+\chapter{常用环境}
+
+\section{公式}
+amsmath宏包提供了丰富的数学环境，\cref{eq:example}是宏包中的一个例子。
+\begin{equation}\label{eq:example}
+		\begin{split}
+			H_c & = \frac{1}{2n} \sum^n_{l = 0}(-1)^{l}(n-{l})^{p-2}
+			\sum_{l _1+\dots+l _p = 1}\prod^p_{i = 1} \binom{n_i}{l _i}
+			\\
+			& \quad\cdot[(n-1 )-(n_i-l _i)]^{n_i-l _i}\cdot
+			\Bigl[(n-l )^2-\sum^p_{j = 1}(n_i-l _i)^2\Bigr].
+	\end{split}
+\end{equation}
+
+\section{插图}
+插入一张图片如\cref{fig:example}~所示，双语标题用 \concise{\bicaption}，否则用 \concise{\caption}。
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.5\textwidth]{example-image-a}
+	\caption{单图插图示例}
+	\label{fig:example}
+\end{figure}
+
+\section{表格}
+表格应具有三线表格式，当插入的表格某一单元格内容过长以至于一行放不下的情况可以使用tabularx环境，设置了L、C和R三个列对齐选项，一个例子如\cref{tab:example}~所示。
+\begin{table}[htbp]
+\centering
+\caption{使用tabularx创建内容过长表格}\zihao{5}
+\label{tab:example}
+	\begin{tabularx}{0.87\textwidth}{llL}
+		\toprule
+		Value & Types & Quisque ullamcorper placerat ipsum \\
+		\midrule
+		1 & One & Nulla malesuada porttitor diam. \\
+		2 & Two & Nullam elementum, urna vel imperdiet sodales, elit ipsum pharetra ligula, ac pretium ante justo a nulla. Curabitur tristique arcu eu metus. Vestibulum lectus. Proin mauris. Proin eu nunc eu urna hendrerit faucibus. \\
+		3 & Three & Nunc elementum fermentum wisi. Aenean placerat. Ut imperdiet, enim sed gravida sollicitudin, felis odio placerat quam, ac pulvinar elit purus eget enim. \\
+		\bottomrule
+	\end{tabularx}
+\end{table}
+
+\clearpage
+\section{列表}
+
+\subsection{排序列表}
+使用enumerate环境可创建有序列表。
+\begin{enumerate}
+\item 第一项
+\item 第二项	
+\begin{enumerate}
+	\item 第二项中的第一项
+	\item 第二项中的第二项
+	\end{enumerate}
+\end{enumerate}
+
+\subsection{常规列表}
+使用itemize环境可创建有序列表。
+\begin{itemize}
+\item 第一项\\
+使用itemize环境可创建不计数列表，若换行不缩进。\par
+若在列表中分段后则缩进两字符。
+\item 第二项
+	\begin{itemize}
+	\item 第二项中的第一项
+	\item 第二项中的第二项
+	\end{itemize}
+\end{itemize}
+
+\subsection{主题列表}
+使用description环境可创建带有主题词的列表。
+\begin{description}
+	\item[主题一] 详细内容
+	\item[主题二] 详细内容
+\end{description} 

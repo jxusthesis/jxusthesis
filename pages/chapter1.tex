@@ -1,0 +1,20 @@
+% Chapter 1
+
+\chapter{绪论}
+
+\section{说明}
+此模板基于作者的宏包easybook\footnote{https://ctan.org/pkg/easybook}（已被\TeX Live和MiK\TeX 收录） 创建，提供一定的格式定制，用法不进行细举。同时完全兼容easybook与\CTeX 宏集的命令，详细用法可看它们的帮助文档。
+
+本模板仅仅提供了论文的基本格式，包括章节标题和正文字体、字号等等的设置，目前只适用于本科学位论文。您自愿使用这个模板，提供本模板的目的是为了给您的论文写作带来方便，并不保证这个模板完全符合学校的要求。
+
+\medskip\noindent
+\github~\url{https://github.com/latex2e/jxusthesis}
+
+\section{编译方式}
+需要安装最新版\TeX~Live套装（2020及以后），并将宏包更新为最新版本。编译引擎为 \hologo{XeLaTeX} 或 \hologo{LuaLaTeX}，参考文献后端使用\hologo{BibTeX} 或 \hologo{biber}，字体已根据要求设置为windows系统自带字体。默认的编译方式为
+\begin{lstlisting}[numbers=none]
+xelatex jxusthesis
+bibtex jxusthesis
+xelatex jxusthesis
+xelatex jxusthesis
+\end{lstlisting}

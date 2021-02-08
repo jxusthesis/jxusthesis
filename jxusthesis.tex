@@ -1,0 +1,36 @@
+\documentclass{jxusthesis}
+\ctexset
+  {
+    bibset =
+      {
+        backend = bibtex, % backend = ⟨bibtex|biblatex⟩
+        bibstyle = number,
+        bibfile = ref/refs.bib  % 参考文献源文件
+      }
+  }
+
+\title{\textcolor{blue}{这是一个足够长的标题自动换行并居中}}
+\subtitle{本科毕业论文\LaTeX{}模板}
+\college{}
+\major{}
+\stunum{123456789}
+\author{}
+\teacheri{张三}{}
+\teacherii{李四}{}
+\date{\today}
+\header{江西理工大学XXXX届本科生毕业设计（论文）}
+
+\begin{document}
+\frontmatter
+\include{pages/abstract}
+\tableofcontents
+
+\mainmatter
+\include{pages/chapter1}
+\include{pages/chapter2}
+\include{pages/chapter3}
+
+\backmatter
+\include{pages/appendix}
+\printbibliography
+\end{document}

@@ -1,0 +1,55 @@
+% Chapter 3
+
+\chapter{其它格式}
+
+\section{定理}
+\begin{theorem}[（中文括号）]\label{theorem:example}
+	这是一条跟随章编号的定理，引用如\cref{theorem:example}。
+\end{theorem}
+\begin{definition}[ (English bracket)]
+	这是一条定义。
+\end{definition}
+\begin{lemma}
+	这是一条引理。
+\end{lemma}
+\begin{corollary}
+	这是一条推论。
+\end{corollary}
+\begin{proposition}
+	这是一条性质。
+\end{proposition}
+\begin{example}
+	这是一条例。
+\end{example}
+\begin{remark}
+	这是一条注。
+\end{remark}
+\begin{proof}
+	这是一个证明，末尾自动添加证明结束符。
+\end{proof}
+
+\section{引用}
+使用 \concise{\cref} 命令进行引用，将会自动检测环境并添加相应的前缀。
+
+\subsection{脚注}
+这里引用脚注\footnote{脚注示例文字。}。
+
+\subsection{引用文中小节}\label{subsec:example}
+如引用\cref{subsec:example}。
+
+\subsection{参考文献}
+默认是GB/T 7714-2015中国参考文献标准，顺序编码制风格，这是一个参考文献引用的范例\cite{1979Prospect}。
+
+引用多个文献，将引用标号中的多个文献序号按升序排列，若其中有3个以上的连续序号，则改用范围序号，例如\cite{1979Prospect,2010An,1989The}。
+
+\section{代码}
+使用lstlisting环境可以对代码进行格式化
+\begin{lstlisting}[language = Python]
+import numpy as np
+
+a = np.zeros((2,2))
+print(a)
+\end{lstlisting}
+
+\section{物理量与国际单位}
+siunitx宏包大大简化了符号输入，论文写作中很大一部分是单位、数字。这个宏包设置了一些命令，\concise{\num}~命令可以输入我们想要的各种方式的数字形式，比如科学计数法~\num{.3e45x1}。而~\concise{\SI}~命令用来输出标准单位，比如~\SI{10}{Hz}，更多用法与单位见宏包文档。
